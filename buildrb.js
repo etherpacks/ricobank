@@ -12,9 +12,6 @@ const unipackcids = {
   goerli: 'bafkreidmspy2c7g7xe5ghg4fdp3svrvwj7xd33weq3wwebgzr42redzj2i',
   sepolia: 'bafkreiamg5nrpk5r2tvayrzt344vulxno4d3houxsdndwrdj5diulkfxau'
 }
-const clpackcids = {
-  arbitrum: 'bafkreicgef4oib3sjjtdi5wwfrk724ubncs5pa7igcealla3d6gwnaff3q',
-}
 
 const ADDRS = {
   sepolia: {
@@ -65,6 +62,14 @@ async function buildrb(network) {
 
   await builder.merge(gf_pack, uni_pack)
 
+  const diamond_artifact = require('./lib/ricobank/artifacts/src/diamond.sol/BankDiamond.json')
+  bank.deployedBytecode = diamond_artifact.deployedBytecode
+  bank.bytecode = diamond_artifact.bytecode
+  bank.linkReferences = diamond_artifact.linkReferences
+  bank.deployedLinkReferences = diamond_artifact.deployedLinkReferences
+  bank.abi = bank.abi.filter((item, idx) => {
+      return bank.abi.findIndex(a => item.name == a.name) == idx
+  })
 
   const artifacts = {
     ball: { abi: ball.abi, bytecode: ball.bytecode },
