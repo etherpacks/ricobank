@@ -35,7 +35,7 @@ async function build(network, gf_address) {
 
   const cid = await dpack.putIpfsJson(pack, true)
   console.log(`  ${network} pack @ ${cid}`)
-  fs.writeFileSync(`./pack/uniswapv3_${network}.dpack.json`, JSON.stringify(pack, null, 2));
+  fs.writeFileSync(`./pack/gemfab_${network}.dpack.json`, JSON.stringify(pack, null, 2));
 }
 
 console.log("Writing packs:")
