@@ -1,0 +1,3 @@
+[submodule "lib/ricobank"]
+	path = lib/ricobank
+	url = https://github.com/ricobank/ricobank

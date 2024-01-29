@@ -1,0 +1,4 @@
+Writing packs:
+  arbitrum pack @ bafkreibhkoqc5nda6dlubyvsylethk5nxqynjltnsxnlmpc7inpcmiveom
+  sepolia pack @ bafkreicj5dewhcv3x6nq66vnedwcaknxzt56hb2sxesdpaga5wbrdsjlmq
+  arbitrum_sepolia pack @ bafkreibhbhwmjnlxlt5iq4lz6wgvmulnlw3g6umni4iwst3j6wrqq2il5e

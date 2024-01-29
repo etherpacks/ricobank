@@ -1,0 +1,14 @@
+{
+  "name": "ricobank-pack",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "author": "halys",
+  "license": "ISC",
+  "devDependencies": {
+    "@etherpacks/dpack": "^0.0.31",
+    "hardhat": "^2.12.6"
+  }
+}

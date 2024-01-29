@@ -1,0 +1,28 @@
+{
+  "format": "dpack-1",
+  "network": "sepolia",
+  "types": {
+    "Gem": {
+      "typename": "Gem",
+      "artifact": {
+        "/": "bafkreigzslmouuh7sbtjl2d3vy3ndwhvaff3dlnlqvct6aiexflwgkys3e"
+      }
+    },
+    "GemFab": {
+      "typename": "GemFab",
+      "artifact": {
+        "/": "bafkreicbtsqhqzhnzmcmev5ry2iyiahuh4czggm36ckheuu4zesyxf4ije"
+      }
+    }
+  },
+  "objects": {
+    "gemfab": {
+      "objectname": "gemfab",
+      "typename": "GemFab",
+      "artifact": {
+        "/": "bafkreicbtsqhqzhnzmcmev5ry2iyiahuh4czggm36ckheuu4zesyxf4ije"
+      },
+      "address": "0x708a8cB4Fe21717a827EE6De133B1Ad9a954B60a"
+    }
+  }
+}
