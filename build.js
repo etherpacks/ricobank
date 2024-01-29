@@ -4,7 +4,7 @@ const dpack   = require('@etherpacks/dpack')
 const gemfab  = require('./lib/ricobank/artifacts/lib/gemfab/src/gem.sol/GemFab.json')
 const gem = require('./lib/ricobank/artifacts/lib/gemfab/src/gem.sol/Gem.json')
 
-async function build(network, gf_address) {
+async function buildgf(network, gf_address) {
   const builder = new dpack.PackBuilder(network)
   const json = JSON.stringify
 
@@ -38,8 +38,7 @@ async function build(network, gf_address) {
   fs.writeFileSync(`./pack/gemfab_${network}.dpack.json`, JSON.stringify(pack, null, 2));
 }
 
-console.log("Writing packs:")
-build('arbitrum', '0x5C635933743B93BC1C51B4798C984867Fc31BFC7')
-build('sepolia', '0x708a8cB4Fe21717a827EE6De133B1Ad9a954B60a')
-build('arbitrum_sepolia', '0x708a8cB4Fe21717a827EE6De133B1Ad9a954B60a')
-
+console.log("Writing gemfab packs:")
+buildgf('arbitrum', '0x5C635933743B93BC1C51B4798C984867Fc31BFC7')
+buildgf('sepolia', '0x16c530fe029a18c350774be00cee0bce130a4c99')
+buildgf('arbitrum_sepolia', '0x708a8cB4Fe21717a827EE6De133B1Ad9a954B60a')
